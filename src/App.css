@@ -1,0 +1,224 @@
+:root {
+  --primaryColor: #282c34;
+  --secondColor: #abc123;
+  --altColor: #123abc;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: 330px 1fr minmax(450px, 620px);
+  /*background-color: #282c34; */
+  background-image: url('../public/background.svg');
+  color: #282c34;
+}
+
+.navContainer {
+  grid-column-start: 3;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(80px, 120px));
+  gap: 5px;
+}
+
+.navContainer a {
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 120px;
+  color:#282c34;
+}
+
+#title {
+  font-size: 50px;
+  font-weight: bolder;
+  color: #282c34;
+  text-decoration: none;
+  text-align: start;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.welcome {
+  padding: 15px;
+  text-align: center;
+  font-size: x-large;
+  color: #282c34;
+  font-weight: bold;
+}
+
+.home {
+  text-align: center;
+  width: min(100vw, 600px);
+  background-color: #282c34;
+  color: white;
+  padding: 5px 15px;
+}
+
+.update {
+  background-color: blue;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: white;
+  width: 200px;
+}
+
+.recipeList {
+  background-color: rgba(31, 29, 29, 0.826);
+  padding: 20px;
+}
+
+#exploreTitle {
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.background {
+
+  padding: 20px;
+}
+
+.recipeCard {
+  border-radius: 15px;
+  background-color: white;
+  border: 3px solid red;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.RCtitle {
+  color: #282c34; 
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.recipeCardContainer {
+  background-image: url('../public/background.svg');
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-rows: repeat(auto-fit, 250px);
+  gap: 25px;
+}
+
+.creator {
+  text-align: center;
+  color: white;
+  font-size: large;
+}
+
+.description {
+  color: white;
+}
+
+.ingreTitle, .stepTitle {
+  color: white;
+  font-size: larger;
+  text-decoration: underline;
+}
+
+.ingredients, .steps {
+  color: white;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: large;
+  padding-left: 20px;
+}
+
+.notes {
+  color: white;
+}
+
+.notesTitle {
+  text-decoration: underline;
+  color: white;
+}
+
+.editRecipe, .deleteRecipe {
+  color:#282c34;
+  background-color: white;
+  font-weight: bold;
+  border: 2px solid #282c34;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.userForm, .recipeForm {
+  margin: 30px;
+  padding: 20px 10px;
+  color: white;
+  background-color: #282c34;
+  text-align: center;
+}
+
+.userForm {
+  width: 400px;
+}
+
+.recipeForm {
+  width: 600px;
+}
+
+.formField {
+  margin-bottom: 10px;
+}
+
+label {
+  text-align: left;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.submit {
+  margin-top: 20px;
+}
