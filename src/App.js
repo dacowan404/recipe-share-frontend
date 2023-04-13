@@ -53,7 +53,6 @@ function App() {
         <div className="nav">
           <Navbar />
         </div>
-        <div>{BACKEND_ADDRESS}</div>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/explore' element={<Explore />} />

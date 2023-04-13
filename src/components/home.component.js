@@ -20,7 +20,8 @@ function Home()  {
         <div className='center'>
           <div className='home'>
             <p>Please login or create an account in order to get full experience from this website.<br />
-              A test account is available to allow you to explore the features without needing to create an account. </p>
+              A test account is available to allow you to explore the features without needing to create an account. <br />
+              Additionally, it may take a minute to start backend after first trying to login or explore new recipes.</p>
           </div>
         </div>
       </>
