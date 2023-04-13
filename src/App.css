@@ -30,6 +30,31 @@
   }
 }
 
+.gitHubLinks {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.iconContainer {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+}
+.icon {
+  height: 30px;
+  width: 30px;
+  background-image: url('../public/github.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline;
+  margin-right: 5px;
+}
+
 .navbar {
   display: grid;
   grid-template-columns: 330px 1fr minmax(450px, 620px);

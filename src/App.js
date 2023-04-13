@@ -65,8 +65,12 @@ function App() {
           <Route path='/updatePassword' element={<UpdatePassword />} />
           <Route path='/login' element={<Login />} />
           <Route path='/logout' element={<Logout />} />
-  </Routes> 
+        </Routes> 
       </BrowserRouter>
+      <div className="gitHubLinks">
+        <a href='https://github.com/dacowan404/recipe-share-frontend' className="iconContainer"><div className="icon"></div>Front-End Code</a>
+        <a href='https://github.com/dacowan404/recipe-share-backend' className="iconContainer"><div className="icon"></div>Back-End Code</a>
+      </div>
     </UserContext.Provider>
   );
 } 
