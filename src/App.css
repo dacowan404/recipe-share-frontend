@@ -4,12 +4,6 @@
   --altColor: #123abc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -58,7 +52,6 @@
 .navbar {
   display: grid;
   grid-template-columns: 330px 1fr minmax(450px, 620px);
-  /*background-color: #282c34; */
   background-image: url('../public/background.svg');
   color: #282c34;
 }
@@ -133,7 +126,6 @@ a {
 }
 
 .background {
-
   padding: 20px;
 }
 
@@ -246,4 +238,88 @@ form {
 
 .submit {
   margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    grid-template-rows: 50px minmax(150px, 200px);
+    grid-template-columns: 1fr;
+  }
+  
+  .navContainer {
+    grid-column-start: 1;
+    grid-template-rows: repeat(5, minmax(30px, 50px));
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .navContainer a {
+    max-width: 100vw;
+  }
+    
+  #title {
+    text-align: center;
+    font-size: 30px;
+    padding: 5px;
+  }
+
+  .welcome {
+    padding: 10px;
+  }
+  
+  .gitHubLinks {
+    margin-top: 10px;
+    gap: 20px;
+  }
+  
+  .icon {
+    height: 20px;
+    width: 20px;
+  }
+
+  .recipeList {
+    background-color: rgba(31, 29, 29, 0.826);
+    padding: 10px;
+  }
+    
+  .background {
+    padding: 2px;
+  }
+  .recipeCard div {
+    font-size: 14px;
+  }
+
+  .recipeCard {
+    height: 150px;
+    width: 150px;
+  }
+  .recipeCard .RCtitle {
+    color: #282c34; 
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  .recipeCardContainer {
+    padding: 10px 5px;
+    grid-template-columns: repeat(auto-fit, 160px);
+    grid-template-rows: repeat(auto-fit, 160px);
+    gap: 10px;
+  }
+
+  .userForm, .recipeForm {
+    margin: 0px;
+    padding: 0px 10px 20px 10px;
+  }
+
+  form {
+    margin-top: 5px;
+  }
+
+  textarea {
+    width: 90vw;
+  }
+
+  .submit {
+    margin-top: 10px;
+  }
 }
