@@ -19,6 +19,7 @@ import UpdatePassword from "./components/update-password.component"
 
 export const UserContext = React.createContext({
   BACKEND_ADDRESS: process.env.REACT_APP_BACKEND_ADDRESS,
+  //BACKEND_ADDRESS: process.env.REACT_APP_TEST_ADD,
   userName: null,
   userID: null,
   setUserName: () => {},
@@ -47,7 +48,7 @@ function App() {
   },[userName, userID]);
 
   useEffect(() => {
-    axios.get(process.env.REACT_APP_RENDER_BACKEND_HOOK).then(() => {console.log('connected to backend')})
+    axios.get(BACKEND_ADDRESS + '/start')
   }, []);
   
   return (
