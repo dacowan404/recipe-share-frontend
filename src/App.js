@@ -45,6 +45,10 @@ function App() {
         })
       }
   },[userName, userID]);
+
+  useEffect(() => {
+    axios.get(process.env.REACT_APP_RENDER_BACKEND_HOOK).then(() => {console.log('connected to backend')})
+  }, []);
   
   return (
 
