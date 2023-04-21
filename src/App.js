@@ -46,10 +46,6 @@ function App() {
         })
       }
   },[userName, userID]);
-
-  useEffect(() => {
-    axios.get(BACKEND_ADDRESS + '/start')
-  }, []);
   
   return (
 
