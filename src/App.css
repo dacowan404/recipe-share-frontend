@@ -240,6 +240,17 @@ form {
   margin-top: 20px;
 }
 
+.menu-item {
+  display: none;
+}
+
+.show {
+  display: block;
+  background-color: white;
+  position: relative;
+  
+}
+
 @media (max-width: 800px) {
   .navbar {
     grid-template-rows: 50px minmax(150px, 200px);
