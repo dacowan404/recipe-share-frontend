@@ -1,19 +1,23 @@
-import Dropdown from "./dropdown.component";
 import { Link } from 'react-router-dom';
-import { useState } from 'react'
 
-const MenuItems = ({ items }) => {
-  const [dropdown, setDropdown] = useState(false);
+const MenuItems = ({ items, loggedIn }) => {
   return (
-    <div className="menu-items">
+    <div className="navSection">
       {items.submenu ? (
-        <>
-          <button type="button" aria-haspopup="menu" aria-expanded={dropdown ? "true": "false"}
-            onClick={() => setDropdown((prev) => !prev)}>
-            {items.title}{' '}
-          </button>
-          <Dropdown submenus={items.submenu} dropdown={dropdown} />
-        </>
+        <div className="dropdown">
+          <div className="dropdown-title">{items.title}</div>
+          <div className="dropdown-content">
+            {items.submenu.map((item, index) => {
+              if (loggedIn && item.displayLoggedIn) {
+                return <Link to={item.url} key={index}>{item.title}</Link>
+              } else if (!loggedIn && item.displayLoggedOut) {
+                return <Link to={item.url} key={index}>{item.title}</Link>
+              } else {
+                return undefined;
+              }
+            })}
+          </div>
+        </div>
       ) : (
         <Link to={items.url}>{items.title}</Link>
       )}

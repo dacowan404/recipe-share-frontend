@@ -17,15 +17,21 @@ function Navbar() {
       submenu: [
         {
           title: "Explore New Recipes",
-          url: '/explore'
+          url: '/explore',
+          displayLoggedIn: true,
+          displayLoggedOut: true,
         },
         {
           title: "My Recipes",
           url: '/myRecipes',
+          displayLoggedIn: true,
+          displayLoggedOut: false,
         },
         {
           title: "Liked Recipes",
-          url: '/'
+          url: '/',
+          displayLoggedIn: true,
+          displayLoggedOut: false,
         }
       ]
     },
@@ -35,30 +41,38 @@ function Navbar() {
       submenu: [
         {
           title: "Login",
-          url: '/login'
+          url: '/login',
+          displayLoggedIn: false,
+          displayLoggedOut: true,
         },
         {
           title: "Create Account",
-          url: '/user'
+          url: '/user',
+          displayLoggedIn: false,
+          displayLoggedOut: true,
         },
         {
           title: "Update Password",
           url: '/updatePassword',
+          displayLoggedIn: true,
+          displayLoggedOut: false,
         },
         {
           title: "Logout",
-          url: '/logout'
+          url: '/logout',
+          displayLoggedIn: true,
+          displayLoggedOut: false,
         }
       ]
     }
   ]
-  
+
   return (
     <nav className='navbar'>
       <Link to="/" id='title'>Recipe Share</Link>
-      <div className="navContainer menus">
+      <div className="navContainer">
         {menuItems.map((menu, index) => {
-          return <MenuItems items={menu} key={index} />;
+          return <MenuItems items={menu} key={index} loggedIn={userName ? true : false} />;
         })}
       </div>
     </nav>

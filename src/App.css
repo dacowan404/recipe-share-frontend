@@ -39,6 +39,7 @@
   padding: 10px;
   border-radius: 20px;
 }
+
 .icon {
   height: 30px;
   width: 30px;
@@ -51,7 +52,7 @@
 
 .navbar {
   display: grid;
-  grid-template-columns: 330px 1fr minmax(450px, 620px);
+  grid-template-columns: 330px 1fr 470px;
   background-image: url('../public/background.svg');
   color: #282c34;
 }
@@ -59,18 +60,18 @@
 .navContainer {
   grid-column-start: 3;
   display: grid;
-  grid-template-columns: repeat(5, minmax(80px, 120px));
+  grid-template-columns: repeat(3, 150px);
+  justify-content: end;
   gap: 5px;
 }
 
-.navContainer a {
+.navSection {
   font-size: large;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  max-width: 120px;
   color:#282c34;
 }
 
@@ -81,6 +82,39 @@
   text-decoration: none;
   text-align: start;
   padding: 10px;
+}
+
+.dropdown-content a {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  width: auto;
+  position: absolute;
+  width: 150px;
+  border: solid black 1px;
+  background-color: #f9f9f9;
+  z-index: 1;
+  float: none;
+}
+
+.dropdown {
+  text-align: center;
+}
+
+.dropdown:hover, .dropdown:active {
+  background-color: #123abc;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #282c34;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content {
+  display: block;
 }
 
 a {
@@ -240,32 +274,26 @@ form {
   margin-top: 20px;
 }
 
-.menu-item {
-  display: none;
-}
-
-.show {
-  display: block;
-  background-color: white;
-  position: relative;
-  
-}
-
 @media (max-width: 800px) {
   .navbar {
-    grid-template-rows: 50px minmax(150px, 200px);
+    grid-template-rows: 50px 150px;
     grid-template-columns: 1fr;
   }
   
   .navContainer {
     grid-column-start: 1;
-    grid-template-rows: repeat(5, minmax(30px, 50px));
+    grid-template-rows: repeat(3, minmax(30px 50px));
     grid-template-columns: 1fr;
     gap: 5px;
   }
 
   .navContainer a {
     max-width: 100vw;
+  }
+
+  .dropdown-content {
+    width: 100%;
+    position: static;
   }
     
   #title {
