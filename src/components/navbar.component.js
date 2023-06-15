@@ -22,6 +22,12 @@ function Navbar() {
           displayLoggedOut: true,
         },
         {
+          title: "Create New Recipe",
+          url: '/create',
+          displayLoggedIn: true,
+          displayLoggedOut: false,
+        },
+        {
           title: "My Recipes",
           url: '/myRecipes',
           displayLoggedIn: true,
@@ -80,28 +86,3 @@ function Navbar() {
   }
 
 export default Navbar;
-
-
-/*     <nav className='navbar'>
-      <Link to="/" id='title'>Recipe Share</Link>
-      <div className='navContainer'>
-        <Link to='/'>Home</Link>
-        <Link to='/explore'>Explore</Link>
-
-      { userName ? 
-      <>
-        <Link to='/create'>Create Recipe</Link>
-        <Link to='/myRecipes'>My Recipes</Link>
-        <Link to='/logout'>Logout</Link>
-      </>
-      : <>
-        <div></div>
-        <Link to='/user'>Create Account</Link>
-        <Link to='/login'>Login</Link>
-      </>
-      }
-
-
-      </div>
-    </nav>
-*/

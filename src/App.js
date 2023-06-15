@@ -18,8 +18,8 @@ import UpdatePassword from "./components/update-password.component"
 
 
 export const UserContext = React.createContext({
-  BACKEND_ADDRESS: process.env.REACT_APP_BACKEND_ADDRESS,
-  //BACKEND_ADDRESS: process.env.REACT_APP_TEST_ADD,
+  //BACKEND_ADDRESS: process.env.REACT_APP_BACKEND_ADDRESS,
+  BACKEND_ADDRESS: process.env.REACT_APP_TEST_ADD,
   userName: null,
   userID: null,
   setUserName: () => {},
